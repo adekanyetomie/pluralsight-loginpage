@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
+@import './_color.sass';
+
+$fontstack: Roboto, sans-serif;
+$font-weight:300;
+$image-width: 80%;
+$pad-ding: 10%;
+$img-top: 25%;
+$img-path:'./assets';
+$bg-size: 100% ;
+$display: flex  ; 
+$content-align: center; 
+$signin-width: 80%;
+$default: 100%;
+        
+     
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: $fontstack;
+    font-weight: $font-weight;
+    background:$background-color;
+    color: $text-color; 
+    overflow: hidden;
+}   
+img{
+    max-width: $image-width;
+    padding-top: $img-top;
+    padding-left: $pad-ding
+}
+form {
+    padding-right: $pad-ding
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: $font-weight      
+}
+wrapper {
+    display:$display ;
+    flex-direction: row;
+}
+left{
+    flex-direction: column;
+    display: $display;
+    float: 1;
+    align-items: $content-align;
+    justify-content: $content-align;
+    height:100vh;   
+}
+right {
+    flex: 1;
+    background-image: url(-path/bg.png) no-repeat;
+    background-size: -size;
+}
+signin {
+    display: $display; 
+    flex-direction: column;
+    justify-content: $content-align;
+    align-items: $content-align;
+    width: $signin-width;
+    padding-bottom: 1rem;
+
+    form {
+        width: $signin-width;
+        padding-bottom: 3rem;
+    }    
+    logo {
+        margin-bottom: 8vh;
+    
+        img {
+            width: 300
+        }
+    }        
+    label{ 
+        font-size: 0.9rem;
+        line-height: 2rem;
+        font-weight: 500;
+    }    
+    text-input{  
+        margin-bottom: 1.3rem;
+        width: $default ;
+        border-radius: 2px;
+        background: $background-color;
+        border: ipx solid $border-color;
+        color: $signin-text; 
+        padding: 0.5rem 1rem;
+        line-height: 1.3rem;
+    }    
+    primary-btn{
+        width: $default 
+    }    
+    secondary-btn,or,links {
+        width: (100%-40%)   
+    }
+    links{
+        a{
+            color: $text-color;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            display: block;
+            text-align: $content-align;
+            font-size: 0.9rem
+        }
+    }        
+    or{ 
+        display: $display ;
+        flex-direction: row;
+        align-items: $content-align;
+
+        bar {
+            flex: auto;
+            border: none;
+            height: 1px;
+            background: $horizontal-bar ;
+
+            span {
+                color: $signin-text ;
+                padding: 0 0.8rem;
+            }
+        }
+}                
+showcase{
+    display: $display; 
+    justify-content: $content-align;
+    align-items: $content-align ;
+    text-align: $content-align;
+    height: 100vh;
+
+    showcase-text{
+        font-size: 3rem;
+        width: $default; 
+        color: $text-color; 
+        margin-bottom: 1.5;
+    }
+    secondary-btn{
+        width: 100%-40%;
+        margin: auto;
+    }
+}    
+main-footer{
+    color: $signin-text ;
+    text-align: $content-align ;
+    font-size: 0.8rem;
+    max-width: $signin-width;
+    padding-top: 5rem;
+
+    a{
+        color: $footer-color;
+        text-decoration: underline;
+    } 
+}       
+
+primary-btn,secondary-btn{
+    padding: 0.7rem 1rem;
+    height: 2.7rem;
+    display: block;
+    border: 0;
+    border-radius: 2px;
+    font-weight: 500;
+    background: $footer-color; 
+    color: $text-color;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: $content-align;
+    transition: all 0.5s;
+
+    &:hover{
+        background-color: $button-hover-color;
+    }  
+}      
+secondary-btn{
+
+    &:hover{
+        color: $button-hover-color
+    } 
+}       
+}   
+
+
+        
+
+
